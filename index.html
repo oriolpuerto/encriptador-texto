@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width"> 
+    <i class="bi bi-exclamation-circle-fill"></i>
+    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@700&family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Encriptador de Texto</title>
+</head>
+<body>
+    <div class="caja">
+        <img src="img/LogoT.png" alt="Logo Alura">
+    </div>
+    <section id="seccionEntrada">
+            <textarea type="text" cols="70" rows="13" id="textoUsuario" class="container__input" required placeholder="Ingrese el texto aquí" onkeypress="return soloLetras(event)" inputmode="text"></textarea>
+             <div id="sugerencia">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-exclamation-circle-fill" viewBox="0 0 16 16"><path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M8 4a.905.905 0 0 0-.9.995l.35 3.507a.552.552 0 0 0 1.1 0l.35-3.507A.905.905 0 0 0 8 4m.002 6a1 1 0 1 0 0 2 1 1 0 0 0 0-2"/></svg><span> Solo letras minúsculas y sin acentos</span>
+            </div>
+            <div class="container__botones">
+                <button onclick="encriptar();" class="encriptar__boton">Encriptar</button>
+                <button onclick="desencriptar();" class="desencriptar__boton">Desencriptar</button>
+            </div>
+    </section>
+        <div class="container__texto">
+            <p id="textoEncDes"></p>
+            <button onclick="copiarContenido();" id="copiar">Copiar</button>
+        </div>
+    <section class="temporal" id="SeccionTexto">
+        <img src="img/Muñeco.png" alt="Imagen" class="container__imagen" id="imagen">
+        <div class="texto__inicio">
+            <h1>Ningún mensaje fue encontrado</h1>
+            <h2>Ingresa el texto que desees encriptar o desencriptar</h2>
+        </div>
+    </section>
+    <footer>
+        <p>-- Design by Oriol Puerto 2024 - Alura ONE --</p>
+    </footer>
+    <script src="app.js"></script>
+</body>
+</html>
